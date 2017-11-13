@@ -24,6 +24,7 @@ nav {
     max-width: 160px;
     margin: 0;
     padding: 1em;
+    height: 100%;
 }
 
 nav ul {
@@ -54,7 +55,7 @@ article {
     <h1>Halloween shop</h1>
 </header>
 
-<nav>
+<nav style="height: 100%">
     <ul>
         <li><a href="index.php">Home</a></li>
         <li><a href="bestellen.php">Bestellen</a></li>
@@ -68,6 +69,9 @@ article {
         SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT </article>
     <article>SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT </article>
     <article>SAMPLE TEXT SAMPLE TEXT </article>
+    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m0!4v1510584752595!6m8!1m7!1si0R7x-J9MBJzI9p_Z8-Mkg!2m2!1d50.91649804941053!2d5.693329295521409!3f318.1388983554715!4f-3.113269980395785!5f1.1924812503605782"
+     width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 <footer>Copyright &copy; Halloweenshop.nl</footer>
 </div>
 </body>

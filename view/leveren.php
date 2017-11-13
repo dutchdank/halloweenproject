@@ -65,7 +65,6 @@ article {
 </nav>
 
 <article>
-    
     <p>Rekem</p>
     <p>Lanaken</p>
     <p>Maasmechelen</p>

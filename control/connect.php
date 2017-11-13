@@ -3,6 +3,9 @@ class connect
 {
     protected $pdo;
     
+    /*
+    * Code constructor
+    */
     function __construct()
     {
         $this->connectToDb();

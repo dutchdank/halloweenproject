@@ -64,19 +64,14 @@ article {
     </ul>
 </nav>
 
-<article>
-    <p>Welkom bij #!</p>
-    <p>Deze maand voor halloween hebben wij een actie waarbij we ook aan # zullen bezorgen.</p>
-    <p>Onze uren zijn:</p>
-    
-    <ul>
-        <li>Tussen 7:00 en 8:00</li>
-        <li>Tussen 8:00 en 9:00</li>
-        <li>Tussen 9:00 en 10:00</li>
-        <li>Tussen 10:00 en 11:00</li>
-        <li>Tussen 11:00 en 12:00</li>
-    </ul>
-</article>
+<iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCSYCOAyFFCNxrR8_nATUtT_mt0PbXBrRY
+    &q=Veldstraat+46,Rekem" allowfullscreen>
+</iframe>
+
 <footer>Copyright &copy; Halloweenshop.nl</footer>
 </div>
 </body>

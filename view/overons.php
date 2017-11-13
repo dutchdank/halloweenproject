@@ -60,6 +60,7 @@ article {
         <li><a href="bestellen.php">Bestellen</a></li>
         <li><a href="leveren.php">Waar we leveren</a></li>
         <li><a href="overons.php">Over Ons</a></li>
+        <li><a href="map.php">Map</a></li>
     </ul>
 </nav>
 

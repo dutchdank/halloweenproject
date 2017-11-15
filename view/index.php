@@ -6,41 +6,38 @@
 <html>
 <head>
 <style>
-div.container {
-    width: 100%;
-    border: 1px solid gray;
-}
-
-header, footer {
-    padding: 1em;
-    color: white;
-    background-color: black;
-    clear: left;
-    text-align: center;
-}
-
-nav {
-    float: left;
-    max-width: 160px;
+body {
     margin: 0;
-    padding: 1em;
 }
 
-nav ul {
+ul {
     list-style-type: none;
+    margin: 0;
     padding: 0;
+    width: 15%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
 }
-   
-nav ul a {
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
     text-decoration: none;
 }
 
-article {
-    margin-left: 170px;
-    border-left: 1px solid gray;
-    padding: 1em;
-    overflow: hidden;
+li a.active {
+    background-color: #e07d0d;
+    color: white;
 }
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
 </style>
 <title>
     
@@ -48,36 +45,33 @@ article {
 </head>
 <body>
 
-<div class="container">
-
 <header>
     <h1>Halloween shop</h1>
 </header>
 
-<nav>
     <ul>
-        <li><a href="index.php">Home</a></li>
+        <li><a class="active" href="index.php">Home</a></li>
         <li><a href="bestellen.php">Bestellen</a></li>
         <li><a href="leveren.php">Waar we leveren</a></li>
         <li><a href="overons.php">Over Ons</a></li>
         <li><a href="map.php">Map</a></li>
     </ul>
-</nav>
 
-<article>
-    <p>Welkom bij #!</p>
-    <p>Deze maand voor halloween hebben wij een actie waarbij we ook aan # zullen bezorgen.</p>
-    <p>Onze uren zijn:</p>
+    <div style="margin-left:15%;padding:1px 16px;height:1000px;">
     
-    <ul>
-        <li>Tussen 7:00 en 8:00</li>
-        <li>Tussen 8:00 en 9:00</li>
-        <li>Tussen 9:00 en 10:00</li>
-        <li>Tussen 10:00 en 11:00</li>
-        <li>Tussen 11:00 en 12:00</li>
-    </ul>
-</article>
-<footer>Copyright &copy; Halloweenshop.nl</footer>
+    <article>
+        <h2>Welkom bij Halloween Shop!</h2>
+        <p>Deze maand voor halloween hebben wij een actie waarbij we ook aan # zullen bezorgen.</p>
+        <p>Onze uren voor 2017 zijn:</p>
+    
+
+        <p><h3>Tussen 7:00 en 8:00</h3></p>
+        <p><h3>Tussen 8:00 en 9:00</h3></p>
+        <p><h3>Tussen 9:00 en 10:00</h3></p>
+        <p><h3>Tussen 10:00 en 11:00</h3></p>
+        <p><h3>Tussen 11:00 en 12:00</h3></p>
+
+    </article>
 </div>
 </body>
 </html>

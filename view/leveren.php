@@ -6,40 +6,36 @@
 <html>
 <head>
 <style>
-div.container {
-    width: 100%;
-    border: 1px solid gray;
-}
-
-header, footer {
-    padding: 1em;
-    color: white;
-    background-color: black;
-    clear: left;
-    text-align: center;
-}
-
-nav {
-    float: left;
-    max-width: 160px;
+body {
     margin: 0;
-    padding: 1em;
 }
 
-nav ul {
+ul {
     list-style-type: none;
+    margin: 0;
     padding: 0;
+    width: 15%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
 }
-   
-nav ul a {
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
     text-decoration: none;
 }
 
-article {
-    margin-left: 170px;
-    border-left: 1px solid gray;
-    padding: 1em;
-    overflow: hidden;
+li a.active {
+    background-color: #e07d0d;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
 }
 </style>
 <title>
@@ -48,29 +44,26 @@ article {
 </head>
 <body>
 
-<div class="container">
-
 <header>
     <h1>Halloween shop</h1>
 </header>
 
-<nav>
     <ul>
         <li><a href="index.php">Home</a></li>
         <li><a href="bestellen.php">Bestellen</a></li>
-        <li><a href="leveren.php">Waar we leveren</a></li>
+        <li><a class="active" href="leveren.php">Waar we leveren</a></li>
         <li><a href="overons.php">Over Ons</a></li>
         <li><a href="map.php">Map</a></li>
     </ul>
-</nav>
 
-<article>
-    <p>Rekem</p>
-    <p>Lanaken</p>
-    <p>Maasmechelen</p>
-    <p>Overig</p>
-</article>
-<footer>Copyright &copy; Halloweenshop.nl</footer>
+    <div style="margin-left:15%;padding:1px 16px;height:1000px;">
+    
+    <article>
+        <p>Rekem</p>
+        <p>Lanaken</p>
+        <p>Maasmechelen</p>
+        <p>Overig</p>
+        </article>
 </div>
 </body>
 </html>

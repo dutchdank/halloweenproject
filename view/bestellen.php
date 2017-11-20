@@ -86,7 +86,7 @@
         <div class="col-sm-2">
       <label>Een Persoonsontbijt <br> &#8364;8,-</label> <!-- purely semantic -->
       <div class="form-control input-sm center merge-bottom-input" name="eenontbijt">0</div>
-      <input type=hidden name="eenontbijt" id="eenontbijt">0</div>
+      <input type=hidden name="eenontbijt" id="eenontbijt"></div>
 
       <div class="btn-group btn-block" role="group" aria-label="plus-minus">
         <button type="button" class="btn btn-sm btn-danger minus-button merge-top-left-button" disabled="disabled"><span class="glyphicon glyphicon-minus"></span></button>
@@ -111,7 +111,7 @@
         <div class="col-sm-2">
       <label>Twee Persoonsontbijt <br> &#8364;15,-</label>
       <div class="form-control input-sm center merge-bottom-input" name="tweeontbijt">0</div>
-      <input type=hidden name="kinderontbijt" id="tweeontbijt">0</div>
+      <input type=hidden name="kinderontbijt" id="tweeontbijt"></div>
 
       <div class="btn-group btn-block" role="group" aria-label="plus-minus">
         <button type="button" class="btn btn-sm btn-danger minus-button merge-top-left-button" disabled="disabled"><span class="glyphicon glyphicon-minus"></span></button>
@@ -136,7 +136,7 @@
     <div class="col-sm-2">
       <label>Een Kinderontbijt <br> &#8364;7,-</label>
       <div class="form-control input-sm center merge-bottom-input" name="kinderontbijt">0</div>
-      <input type=hidden name="kinderontbijt" id="kinderontbijt">0</div>
+      <input type=hidden name="kinderontbijt" id="kinderontbijt"></div>
 
       <div class="btn-group btn-block" role="group" aria-label="plus-minus">
         <button type="button" class="btn btn-sm btn-danger minus-button merge-top-left-button" disabled="disabled"><span class="glyphicon glyphicon-minus"></span></button>

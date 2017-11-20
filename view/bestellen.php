@@ -6,73 +6,40 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="robots" content="noindex, nofollow">
+        <meta name="robots" content="noindex, nofollow">
     
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <style type="text/css">
-    .center {
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+                <link href="../assets/style.css" type="text/css" rel="stylesheet">                                          <!-- Link to stylesheet -->
+    <style type="text/css">    
+.center {
  text-align: center;   
 }
-
 .merge-bottom-input {
   width: 67px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-
 .merge-top-left-button {
   border-top-left-radius: 0;
 }
-
 .merge-top-right-button {
   border-top-right-radius: 0;
 }
-body {
-    margin: 0;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 15%;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-}
-
-li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-li a.active {
-    background-color: #e07d0d;
-    color: white;
-}
-
-li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-} /* Styling for columns */
+ /* Styling for columns */
 .column {
     float: left;
     width: 33%;
     padding: 10px;
-    height: 35%; /* Should be removed. Only for demonstration */
+    height: 35%;
 }
-
 /* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
-    </style>
+</style>
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript">
@@ -84,7 +51,7 @@ li a:hover:not(.active) {
         }
         $( document ).ready(function() {
           var iframe_height = parseInt($('html').height()); 
-          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+          //window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
         });
     </script>
 </head>
@@ -119,6 +86,7 @@ li a:hover:not(.active) {
         <div class="col-sm-2">
       <label>Een Persoonsontbijt <br> &#8364;8,-</label> <!-- purely semantic -->
       <div class="form-control input-sm center merge-bottom-input" name="eenontbijt">0</div>
+      <input type=hidden name="eenontbijt" id="eenontbijt">0</div>
 
       <div class="btn-group btn-block" role="group" aria-label="plus-minus">
         <button type="button" class="btn btn-sm btn-danger minus-button merge-top-left-button" disabled="disabled"><span class="glyphicon glyphicon-minus"></span></button>
@@ -126,7 +94,7 @@ li a:hover:not(.active) {
       </div><!-- end button group -->
     </div> <!-- end column -->
   </div>
-  <div class="column" style="background-color:#aaa;">
+  <div class="column" style="background-color:#ccc;">
     <h2>Twee Persoons Ontbijt</h2>
         <br>
         <p><h4>2x Sandwich</h4></p>
@@ -143,6 +111,7 @@ li a:hover:not(.active) {
         <div class="col-sm-2">
       <label>Twee Persoonsontbijt <br> &#8364;15,-</label>
       <div class="form-control input-sm center merge-bottom-input" name="tweeontbijt">0</div>
+      <input type=hidden name="kinderontbijt" id="tweeontbijt">0</div>
 
       <div class="btn-group btn-block" role="group" aria-label="plus-minus">
         <button type="button" class="btn btn-sm btn-danger minus-button merge-top-left-button" disabled="disabled"><span class="glyphicon glyphicon-minus"></span></button>
@@ -161,12 +130,13 @@ li a:hover:not(.active) {
         <p><h4>2x Fruit</h4></p>
         <p><h4>2x Gebak</h4></p>
         <p><h4>1x Siroop</h4></p>
-        <p><h4>2x Doekje</h4></p>
-        <p><h4>1x Schotel Vlees Dubbel</h4></p>
-        <p><h4>1x Schotel Kaas Dubbel</h4></p>
+        <p><h4> </h4></p>
+        <p><h4> </h4></p>
+        <p><h4> </h4></p>
     <div class="col-sm-2">
       <label>Een Kinderontbijt <br> &#8364;7,-</label>
       <div class="form-control input-sm center merge-bottom-input" name="kinderontbijt">0</div>
+      <input type=hidden name="kinderontbijt" id="kinderontbijt">0</div>
 
       <div class="btn-group btn-block" role="group" aria-label="plus-minus">
         <button type="button" class="btn btn-sm btn-danger minus-button merge-top-left-button" disabled="disabled"><span class="glyphicon glyphicon-minus"></span></button>
@@ -176,7 +146,7 @@ li a:hover:not(.active) {
   </div>
 </div>
 
-    <script type="text/javascript">
+<script type="text/javascript">
     $(document).ready( () => {
   $('.minus-button').click( (e) => {
     
@@ -199,7 +169,7 @@ li a:hover:not(.active) {
   });
 
   $('.plus-button').click( (e) => {
-      
+      while (0) {}
     const maxValue = 50
 
     const currentInput = $(e.currentTarget).parent().prev()[0];
@@ -217,6 +187,6 @@ li a:hover:not(.active) {
     }
   });
 });
-    </script>
+</script>
 </body>
 </html>

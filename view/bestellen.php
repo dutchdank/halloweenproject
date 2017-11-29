@@ -1,5 +1,15 @@
 <?php
-  
+    session_start();
+    var_dump($_SESSION['test']);
+    include '../model/task.php';
+    
+    if (isset($_POST['submit'])) {
+        $task = new task();
+            
+        $task->save(ucfirst(strtolower($_POST['vnaam'])),ucfirst(strtolower($_POST['anaam'])),ucfirst(strtolower($_POST['straat'])),$_POST['huisnummer'],$_POST['postcode'],ucfirst(strtolower($_POST['gemeente'])),$_POST['telefoonnummer']);
+        unset($_POST['submit']);
+    }
+    
 ?>
 
 <!DOCTYPE html>
@@ -86,7 +96,7 @@
         <div class="col-sm-2">
       <label>Een Persoonsontbijt <br> &#8364;8,-</label> <!-- purely semantic -->
       <div class="form-control input-sm center merge-bottom-input" name="eenontbijt">0</div>
-      <input type=hidden name="eenontbijt" id="eenontbijt"></div>
+      <input type=hidden name="eenontbijt" id="eenontbijt" /></div>
 
       <div class="btn-group btn-block" role="group" aria-label="plus-minus">
         <button type="button" class="btn btn-sm btn-danger minus-button merge-top-left-button" disabled="disabled"><span class="glyphicon glyphicon-minus"></span></button>
@@ -111,7 +121,7 @@
         <div class="col-sm-2">
       <label>Twee Persoonsontbijt <br> &#8364;15,-</label>
       <div class="form-control input-sm center merge-bottom-input" name="tweeontbijt">0</div>
-      <input type=hidden name="kinderontbijt" id="tweeontbijt"></div>
+      <input type=hidden name="kinderontbijt" id="tweeontbijt" /></div>
 
       <div class="btn-group btn-block" role="group" aria-label="plus-minus">
         <button type="button" class="btn btn-sm btn-danger minus-button merge-top-left-button" disabled="disabled"><span class="glyphicon glyphicon-minus"></span></button>
@@ -136,15 +146,13 @@
     <div class="col-sm-2">
       <label>Een Kinderontbijt <br> &#8364;7,-</label>
       <div class="form-control input-sm center merge-bottom-input" name="kinderontbijt">0</div>
-      <input type=hidden name="kinderontbijt" id="kinderontbijt"></div>
+      <input type=hidden name="kinderontbijt" id="kinderontbijt" /></div>
 
       <div class="btn-group btn-block" role="group" aria-label="plus-minus">
         <button type="button" class="btn btn-sm btn-danger minus-button merge-top-left-button" disabled="disabled"><span class="glyphicon glyphicon-minus"></span></button>
         <button type="button" class="btn btn-sm btn-success plus-button merge-top-right-button"><span class="glyphicon glyphicon-plus"></span></button>
       </div><!-- end button group -->
     </div> <!-- end column -->
-  </div>
-</div>
 
 <script type="text/javascript">
     $(document).ready( () => {

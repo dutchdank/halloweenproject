@@ -1,10 +1,10 @@
 <?php
-    session_start();
-    $_SESSION['test'] = '123';
-
 
   include '../model/task.php';
+        session_start();
+    $_SESSION['test'] = '123';
     
+
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
                 <link href="../assets/style.css" type="text/css" rel="stylesheet">                                          <!-- Link to stylesheet -->
-    <style type="text/css">    
+    <style type="text/css">
+    
+    
+      
 </style>
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
@@ -54,13 +57,25 @@
     </script>
 </head>
     <body oncontextmenu="return false;">
-
+    
+        <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a class="active" href="preorder.php">Bestellen</a></li>
+      <li><a href="leveren.php">Waar we leveren</a></li>
+      <li><a href="overons.php">Over Ons</a></li>
+      <li><a href="map.php">Map</a></li>
+      </ul>
+    
         <br>
         <br>
         <br>
-
+        
+        <header><h1>Hallowinkel Bestellen</h1></header>
+        <br>
+        <br>
+        
         <form action="bestellen.php" method="post">
-            <table>
+            <table align="center">
                 <tr>
                     <td align="left">Voornaam*: </td>
                     <td align="right"><input type="text" style="text-transform: capitalize;" class="maskOnlyLetters" name="vnaam" maxlength="25" required></td>

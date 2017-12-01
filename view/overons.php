@@ -11,7 +11,7 @@
 
 <ul>
   <li><a href="index.php">Home</a></li>
-  <li><a href="bestellen.php">Bestellen</a></li>
+  <li><a href="preorder.php">Bestellen</a></li>
   <li><a href="leveren.php">Waar we leveren</a></li>
   <li><a class="active" href="overons.php">Over Ons</a></li>
   <li><a href="map.php">Map</a></li>

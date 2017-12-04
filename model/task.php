@@ -35,7 +35,12 @@ class task extends connect
         $sql = "INSERT INTO hallowinkel (voornaam, achternaam, straat, huisnummer, postcode, gemeente, telefoonnummer, enkelontbijt, dubbelontbijt, kinderontbijt, email, paymentid) VALUES (:voornaam, :achternaam, :straat,
                                         :huisnummer, :postcode, :gemeente, :telefoonnummer, :enkelontbijt, :dubbelontbijt, :kinderontbijt, :email, :paymentid)";
         $stmt = $this->pdo->prepare($sql);
-        
+    
+//    function email($email) 
+//    {
+//        mail($email, 'test', 'test body');
+//    }
+    
         // bind parameters to statement
             $stmt->bindParam(':voornaam', $voornaam);
             $stmt->bindParam(':achternaam', $achternaam);

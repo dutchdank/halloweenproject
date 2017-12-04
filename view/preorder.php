@@ -4,6 +4,7 @@
         session_start();
     $_SESSION['test'] = '123';
     
+    $paymentid = date("d-m-Y H:i:s");
 
 ?>
 
@@ -57,6 +58,9 @@
     </script>
 </head>
     <body oncontextmenu="return false;">
+    <header>
+        <h1>Halloween shop</h1>
+    </header>
     
         <ul>
       <li><a href="index.php">Home</a></li>
@@ -98,6 +102,9 @@
                 <td align="left">Telefoonnummer*: </td>
                     <td align="right"><input type="number" name="telefoonnummer" class="maskNumber" required onkeypress="return checkSpcialChar(event)"></td>
                 </tr><tr>
+                <td align="left">Email*: </td>
+                    <td align="right"><input type="text" style="text-transform: capitalize;" maxlength="35" name="email" required></td>
+                </tr><tr>                
                 <td align="left"><input type="submit" name="submit" value="Opslaan"></td>
             </table>
         </form>

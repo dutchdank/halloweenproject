@@ -2,8 +2,8 @@
     include '../model/task.php';
     
     if (isset($_POST['submit'])) {
-        $task = new task();          
-        // $task->save(ucfirst(strtolower($_POST['vnaam'])),ucfirst(strtolower($_POST['anaam'])),ucfirst(strtolower($_POST['straat'])),$_POST['huisnummer'],$_POST['postcode'],ucfirst(strtolower($_POST['gemeente'])),$_POST['telefoonnummer']);
+        //$task = new task();          
+        //$task->save(ucfirst(strtolower($_POST['vnaam'])),ucfirst(strtolower($_POST['anaam'])),ucfirst(strtolower($_POST['straat'])),$_POST['huisnummer'],$_POST['postcode'],ucfirst(strtolower($_POST['gemeente'])),$_POST['telefoonnummer'],$_POST['enkelontbijt'],$_POST['dubbelontbijt'],$_POST['kinderontbijt']);
     }
     
 ?>
@@ -122,16 +122,20 @@
   <br>
   <br>
   <br>
-  <form>
+  <form action="payment.php" method="post">
     <input type="hidden" name="vnaam" id="vnaam" value="<?=$_POST['vnaam']?>">
-    <p>Enkel Ontbijt <input type="text" /> x &#8364;8,-</p>
+    <p>Enkel Ontbijt <input type="number" name="enkelontbijt" id="enkelontbijt" value="0" min="0" min="1" /> x &#8364;8,-</p>
     <input type="hidden" name="anaam" id="anaam" value="<?=$_POST['anaam']?>">
-    <p>Dubbel Ontbijt <input type="text" /> x &#8364;15,-</p>
+    <p>Dubbel Ontbijt <input type="number" name="dubbelontbijt" name="dubbelontbijt" value="0" min="0" step="1" /> x &#8364;15,-</p>
     <input type="hidden" name="straat" id="straat" value="<?=$_POST['straat']?>">
-    <p>Kinder Ontbijt <input type="text" /> x &#8364;7,-</p>
+    <p>Kinder Ontbijt <input type="number" name="kinderontbijt" id="kinderontbijt" value="0" min="0" step="1" /> x &#8364;7,-</p>
     <input type="hidden" name="huisnummer" id="huisnummer" value="<?=$_POST['huisnummer']?>">
     <input type="hidden" name="postcode" id="postcode" value="<?=$_POST['postcode']?>">
     <input type="hidden" name="gemeente" id="gemeente" value="<?=$_POST['gemeente']?>">
+    <input type="hidden" name="telefoonnummer" id="telefoonnummer" value="<?=$_POST['telefoonnummer']?>">
+    <input type="hidden" name="email" id="email" value="<?=$_POST['email']?>">
+    <? $paymentid = date("d-m-Y H:i:s"); ?>
+    <input type="submit" name="submit" value="Opslaan">
   </form>
 </body>
 </html>

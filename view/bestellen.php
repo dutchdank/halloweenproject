@@ -122,20 +122,19 @@
   <br>
   <br>
   <br>
-  <form action="payment.php" method="post">
-    <input type="hidden" name="vnaam" id="vnaam" value="<?=$_POST['vnaam']?>">
-    <p>Enkel Ontbijt <input type="number" name="enkelontbijt" id="enkelontbijt" value="0" min="0" placeholder="0" step="1" /> x &#8364;8,-</p>
-    <input type="hidden" name="anaam" id="anaam" value="<?=$_POST['anaam']?>">
-    <p>Dubbel Ontbijt <input type="number" name="dubbelontbijt" name="dubbelontbijt" value="0" min="0" placeholder="0" step="1" /> x &#8364;15,-</p>
-    <input type="hidden" name="straat" id="straat" value="<?=$_POST['straat']?>">
-    <p>Kinder Ontbijt <input type="number" name="kinderontbijt" id="kinderontbijt" value="0" min="0" placeholder="0" step="1" /> x &#8364;7,-</p>
-    <input type="hidden" name="huisnummer" id="huisnummer" value="<?=$_POST['huisnummer']?>">
-    <input type="hidden" name="postcode" id="postcode" value="<?=$_POST['postcode']?>">
-    <input type="hidden" name="gemeente" id="gemeente" value="<?=$_POST['gemeente']?>">
-    <input type="hidden" name="telefoonnummer" id="telefoonnummer" value="<?=$_POST['telefoonnummer']?>">
-    <input type="hidden" name="email" id="email" value="<?=$_POST['email']?>">
-    <? $paymentid = date("d-m-Y H:i:s"); ?>
-    <input type="submit" name="submit" value="Opslaan">
+  <form action="aflever.php" method="post">
+        <input type="hidden" name="vnaam" id="vnaam" value="<?=$_POST['vnaam']?>">
+        <p>Enkel Ontbijt <input type="number" name="enkelontbijt" id="enkelontbijt" value="0" min="0" placeholder="0" step="1" /> x &#8364;8,-</p>
+        <input type="hidden" name="anaam" id="anaam" value="<?=$_POST['anaam']?>">
+        <p>Dubbel Ontbijt <input type="number" name="dubbelontbijt" id="dubbelontbijt" value="0" min="0" placeholder="0" step="1" /> x &#8364;15,-</p>
+        <input type="hidden" name="straat" id="straat" value="<?=$_POST['straat']?>">
+        <p>Kinder Ontbijt <input type="number" name="kinderontbijt" id="kinderontbijt" value="0" min="0" placeholder="0" step="1" /> x &#8364;7,-</p>
+        <input type="hidden" name="huisnummer" id="huisnummer" value="<?=$_POST['huisnummer']?>">
+        <input type="hidden" name="postcode" id="postcode" value="<?=$_POST['postcode']?>">
+        <input type="hidden" name="gemeente" id="gemeente" value="<?=$_POST['gemeente']?>">
+        <input type="hidden" name="telefoonnummer" id="telefoonnummer" value="<?=$_POST['telefoonnummer']?>">
+        <input type="hidden" name="email" id="email" value="<?=$_POST['email']?>">
+        <input type="submit" name="submit" value="Opslaan">
   </form>
 </body>
 </html>

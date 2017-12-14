@@ -1,8 +1,6 @@
 <?php
 
   include '../model/task.php';
-        session_start();
-    $_SESSION['test'] = '123';
     
     $paymentid = date("d-m-Y H:i:s");
 

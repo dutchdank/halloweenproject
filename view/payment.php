@@ -48,7 +48,18 @@
             'De tijdstip waar u voor gekozen hebt is: ' . $_POST['afleveruur'] .
             '<br/>' .
             '<br/>' .
-            'Uw bevestigingsnummer is: ' . $id .$paymentid 
+            'Uw bevestigingsnummer is: ' . $id . $paymentid 
+            
+            
+            // $e1 = 8;
+            // $d1 = 15;
+            // $k1 = 7;
+            
+            // $e2 = $_POST['enkelontbijt'] * $e1;
+            // $d2 = $_POST['dubbelontbijt'] * $d1;
+            // $k2 = $_POST['kinderontbijt'] * $k1;
+            
+            // $final = $e2 + $d2 + $k2;
                         
             , 'text/html');
             

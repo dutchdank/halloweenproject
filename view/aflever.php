@@ -59,7 +59,7 @@
             <input type="hidden" name="gemeente" id="gemeente" value="<?=$_POST['gemeente']?>">
             <input type="hidden" name="telefoonnummer" id="telefoonnummer" value="<?=$_POST['telefoonnummer']?>">
             <input type="hidden" name="email" id="email" value="<?=$_POST['email']?>">
-            <? $paymentid = date("d-m-Y H:i:s"); ?>
+            <? $paymentid = date("dmHis"); ?>
             <input type="hidden" name="straat" id="straat" value="<?=$_POST['straat']?>">
             <input type="hidden" name="anaam" id="anaam" value="<?=$_POST['anaam']?>">
             <input type="hidden" name="vnaam" id="vnaam" value="<?=$_POST['vnaam']?>">

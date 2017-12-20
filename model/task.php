@@ -73,5 +73,16 @@ class task extends connect
         
         return $res['id'];
     }
+    
+        function fetchAllTasks()                                                // function is called
+    { 
+        $statement = $this->pdo->prepare('SELECT * FROM hallowinkel ORDER BY straat ASC');             // prepare SQL Query
+
+        $statement->execute();                                              // execute prepared statement
+
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+    
 }
 

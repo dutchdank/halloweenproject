@@ -32,7 +32,8 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 <script>
 $(document).ready(function(){
     $('#myTable').DataTable({
-            "language": {
+        "lengthMenu": [ 10, 20, 50, 100 ],
+        "language": {
                 "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Dutch.json"
             }
         } );

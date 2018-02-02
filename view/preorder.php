@@ -55,7 +55,7 @@
             })
     </script>
 </head>
-    <body oncontextmenu="return false;">
+    <body oncontextmenu="return false;" background="../images/hallowground.jpg">
     <header>
         <h1>Halloween shop</h1>
     </header>
@@ -72,35 +72,35 @@
         <br>
         <br>
         
-        <header><h1>Hallowinkel Bestellen</h1></header>
+        <header><h1 style="color:white;">Hallowinkel Bestellen</h1></header>
         <br>
         <br>
         
         <form action="bestellen.php" method="post">
             <table align="center">
                 <tr>
-                    <td align="left">Voornaam*: </td>
+                    <td align="left" style="color:white;">Voornaam*: </td>
                     <td align="right"><input type="text" style="text-transform: capitalize;" class="maskOnlyLetters" name="vnaam" maxlength="25" required></td>
                 </tr><tr>
-                    <td align="left">Achternaam*: </td>
+                    <td align="left" style="color:white;">Achternaam*: </td>
                     <td align="right"><input type="text" style="text-transform: capitalize;" class="maskOnlyLetters" name="anaam" maxlength="25" required onkeypress="return checkSpcialChar(event)"></td>
                 </tr><tr>
-                    <td align="left">Straat*: </td>
+                    <td align="left" style="color:white;">Straat*: </td>
                     <td align="right"><input type="text" style="text-transform: capitalize;" class="maskNoSpecialsAndSpace" name="straat" maxlength="25" required onkeypress="return checkSpcialChar(event) pattern="[a-zA-Z0-9]+""></td>
                 </tr><tr>
-                    <td align="left">Huisnummer*: </td>
+                    <td align="left" style="color:white;">Huisnummer*: </td>
                     <td align="right"><input type="number" name="huisnummer" class="maskNumber" required onkeypress="return checkSpcialChar(event)"></td>
                 </tr><tr>
-                    <td align="left">Postcode*: </td>
+                    <td align="left" style="color:white;">Postcode*: </td>
                     <td align="right"><input type="text" style="text-transform: capitalize;" class="maskZipcode" name="postcode" minlength="4" required maxlength="7"></td>
                 </tr><tr>
-                    <td align="left">Gemeente*: </td>
+                    <td align="left" style="color:white;">Gemeente*: </td>
                     <td align="right"><input type="text" style="text-transform: capitalize;" class="maskOnlyLetters" maxlength="20" name="gemeente" required onkeypress="return checkSpcialChar(event)" onkeyup="key(event)"></td>
                 </tr><tr>
-                <td align="left">Telefoonnummer*: </td>
+                <td align="left" style="color:white;">Telefoonnummer*: </td>
                     <td align="right"><input type="number" name="telefoonnummer" class="maskNumber" required onkeypress="return checkSpcialChar(event)"></td>
                 </tr><tr>
-                <td align="left">Email*: </td>
+                <td align="left" style="color:white;">Email*: </td>
                     <td align="right"><input type="text" style="text-transform: capitalize;" maxlength="35" name="email" required></td>
                 </tr><tr>                
                 <td align="left"><input type="submit" name="submit" value="Opslaan"></td>

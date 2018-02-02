@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    
 }
 
 ul {
@@ -7,7 +7,7 @@ ul {
     margin: 0;
     padding: 0;
     width: 15%;
-    background-color: #f1f1f1;
+    background-color: black;
     position: fixed;
     height: 100%;
     overflow: auto;
@@ -15,7 +15,7 @@ ul {
 
 li a {
     display: block;
-    color: #000;
+    color: #FFF;
     padding: 8px 16px;
     text-decoration: none;
 }
@@ -29,7 +29,33 @@ li a:hover:not(.active) {
     background-color: #555;
     color: white;
 }
-header h1 {
+h1 {
     width: 100%;
     text-align: center;
+    color: orange;
+}
+h3 {
+    float: right;
+}
+.backend-form input{
+    margin: 0 auto;
+}
+
+body {
+    color: white;
+    margin: 15px !important;
+}
+.btn-primary {
+    color: #000;
+    background-color: #FFA500;
+    border-color: #357ebd;
+}
+.panel-primary>.panel-heading {
+    color: #000;
+    background-color: #FFA500;
+    border-color: #428bca;
+}
+a {
+    color: #FFA500;
+    text-decoration: none;
 }

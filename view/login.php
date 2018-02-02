@@ -84,26 +84,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
+    
+    <link href="../assets/backend.css" type="text/css" rel="stylesheet"> 
+    
 </head>
-<body>
+<body background="../images/hallowground.jpg">
     <div class="wrapper">
-        <h2>Login</h2>
-        <p>Please fill in your credentials to login.</p>
+        <h3><a href="index.php">Home</a></h3>
+        <h2 style="color:white;">Login</h2>
+        <p style="color:white;">Please fill in your credentials to login.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <label>Username:<sup>*</sup></label>
+                <label style="color:white;">Username:<sup>*</sup></label>
                 <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
                 <span class="help-block"><?php echo $username_err; ?></span>
             </div>    
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                <label>Password:<sup>*</sup></label>
+                <label style="color:white;">Password:<sup>*</sup></label>
                 <input type="password" name="password" class="form-control">
                 <span class="help-block"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
             </div>
-            <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+            <p style="color:white;">Don't have an account? <a href="register.php">Sign up now</a>.</p>
         </form>
     </div>    
 </body>

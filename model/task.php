@@ -20,6 +20,7 @@ class task extends connect
     public $paymentid;
     public $email;
     public $afleveruur;
+    
 
     /*function fetchAllTasks()                                                // function is called
     { 
@@ -66,6 +67,23 @@ class task extends connect
 
     }
     
+    public $vraag;
+    public $visible;
+    
+    function saveq($vraag, $visible) {
+        $sql = "INSERT INTO surveys (vraag, visible) VALUES (:vraag, :visible)";
+        $stmt = $this->pdo->prepare($sql);
+        
+        $stmt->bindParam(':vraag', $vraag);
+        $stmt->bindParam(':visible', $visible);
+        
+        try {
+            $stmt->execute();
+        } catch(PDOException $e) {
+            die("ERROR: Not able to execute $sql. " . $e->getMessage());
+        }
+    }
+    
     function inserted_id()
     {
         $stmt = $this->pdo->query('SELECT LAST_INSERT_ID() AS `id`;');
@@ -83,6 +101,35 @@ class task extends connect
         return $statement->fetchAll(PDO::FETCH_ASSOC);
 
     }
-    
+        function fetchAllQuestions() 
+    {
+        $statement = $this->pdo->prepare('SELECT * FROM surveys WHERE visible = 1');
+        
+        $statement->execute();
+        
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+        function fetchAllQuestionsWithStatus() 
+    {
+        $statement = $this->pdo->prepare('SELECT * FROM surveys order by visible, vraag');
+        
+        $statement->execute();
+        
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+        function changequestions($id, $waarde) 
+        {
+            if ($waarde == 1)
+            {
+                $waarde = 0;
+            }
+            else
+            {
+                $waarde = 1;
+            }
+            $sql = "UPDATE surveys SET visible=" . $waarde . " WHERE survey_id=" . $id;
+            $stmt= $this->pdo->prepare($sql);
+            $stmt->execute();
+        }
 }
 

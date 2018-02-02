@@ -17,7 +17,7 @@
     
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-                <link href="../assets/style.css" type="text/css" rel="stylesheet">                                          <!-- Link to stylesheet -->
+        <link href="../assets/style.css" type="text/css" rel="stylesheet">                                          <!-- Link to stylesheet -->
 
         <style>
         {
@@ -58,7 +58,7 @@
         });
     </script>
 </head>
-<body>
+<body background="../images/hallowground.jpg">
 <header>
     <h1>Halloween shop</h1>
 </header>
@@ -124,11 +124,11 @@
   <br>
   <form action="aflever.php" method="post">
         <input type="hidden" name="vnaam" id="vnaam" value="<?=$_POST['vnaam']?>">
-        <p>Enkel Ontbijt <input type="number" name="enkelontbijt" id="enkelontbijt" value="0" min="0" placeholder="0" step="1" /> x &#8364;8,-</p>
+        <p style="color:white;">Enkel Ontbijt <input type="number" name="enkelontbijt" id="enkelontbijt" value="0" min="0" placeholder="0" step="1" /> x &#8364;8,-</p>
         <input type="hidden" name="anaam" id="anaam" value="<?=$_POST['anaam']?>">
-        <p>Dubbel Ontbijt <input type="number" name="dubbelontbijt" id="dubbelontbijt" value="0" min="0" placeholder="0" step="1" /> x &#8364;15,-</p>
+        <p style="color:white;">Dubbel Ontbijt <input type="number" name="dubbelontbijt" id="dubbelontbijt" value="0" min="0" placeholder="0" step="1" /> x &#8364;15,-</p>
         <input type="hidden" name="straat" id="straat" value="<?=$_POST['straat']?>">
-        <p>Kinder Ontbijt <input type="number" name="kinderontbijt" id="kinderontbijt" value="0" min="0" placeholder="0" step="1" /> x &#8364;7,-</p>
+        <p style="color:white;">Kinder Ontbijt <input type="number" name="kinderontbijt" id="kinderontbijt" value="0" min="0" placeholder="0" step="1" /> x &#8364;7,-</p>
         <input type="hidden" name="huisnummer" id="huisnummer" value="<?=$_POST['huisnummer']?>">
         <input type="hidden" name="postcode" id="postcode" value="<?=$_POST['postcode']?>">
         <input type="hidden" name="gemeente" id="gemeente" value="<?=$_POST['gemeente']?>">

@@ -28,7 +28,15 @@
         $transport = (new Swift_SmtpTransport('smtp.tripolis.com', 10025));
         
         $mailer = new Swift_Mailer($transport);
-        
+             $e1 = 8;
+             $d1 = 15;
+             $k1 = 7;
+            
+             $e2 = $_POST['enkelontbijt'] * $e1;
+             $d2 = $_POST['dubbelontbijt'] * $d1;
+             $k2 = $_POST['kinderontbijt'] * $k1;
+            
+             $final = $e2 + $d2 + $k2;
         $message = (new Swift_Message('Uw Bestelling'))
             ->setFrom(['Hallo@winkel.com' => 'Halloween Shop'])
             ->SetTo([$_POST['email'] => $_POST['vnaam']])
@@ -39,7 +47,7 @@
             (int)$_POST['enkelontbijt'] . 'x Enkelontbijt <br/>' .
             (int)$_POST['dubbelontbijt'] . 'x Dubbelontbijt <br/>' .
             (int)$_POST['kinderontbijt'] . 'x Kinderontbijt <br/>' .
-            '<br/>' .           
+            '<br/>' .
             'Hierbij het rekeningnummer voor het betalen van het ontbijt: <br/>' .
             '<br/>' .
             'BE24 9731 0362 5538 <br/>' .
@@ -48,18 +56,15 @@
             'De tijdstip waar u voor gekozen hebt is: ' . $_POST['afleveruur'] .
             '<br/>' .
             '<br/>' .
-            'Uw bevestigingsnummer is: ' . $id . $paymentid 
+            'Uw bevestigingsnummer is: ' . $id . $paymentid .
+            '<br/>' .
+            '<br/>' .
+            '<br/>' .
             
             
-            // $e1 = 8;
-            // $d1 = 15;
-            // $k1 = 7;
+            'De totaal kost is: &#8364;' . $final
             
-            // $e2 = $_POST['enkelontbijt'] * $e1;
-            // $d2 = $_POST['dubbelontbijt'] * $d1;
-            // $k2 = $_POST['kinderontbijt'] * $k1;
-            
-            // $final = $e2 + $d2 + $k2;
+
                         
             , 'text/html');
             
@@ -74,3 +79,9 @@
     
   
 ?>
+<!--<meta http-equiv="refresh" content="5;url=https://halloween.dev/view/survey.php" />
+
+
+<h1>You are being redirected</h1>
+<h2>If the page isn't redirected within 5 seconds, click this link: https://halloween.dev/view/survey.php</h2> --!>
+

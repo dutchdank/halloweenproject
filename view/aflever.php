@@ -26,7 +26,7 @@
 </style>
     
 </head>
-<body>
+<body background="../images/hallowground.jpg">
 
 <header>
     <h1>Halloween shop</h1>
